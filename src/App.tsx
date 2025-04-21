@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
 import Game from "./components/Game";
 import Pizza from "./components/Pizza";
+import Expandable from "./components/Expandable";
 
 function App() {
   //const items = ["New york", "Paris", "London", "Mexico", "England"];
@@ -41,12 +42,25 @@ function App() {
   };
   return (
     <div className="App">
-      {cart.items.map((item) => (
+      <Expandable maxChar={250}>
+        Once upon a time in a peaceful forest a proud and speedy rabbit
+        constantly boasted about how fast he could run. Tired of his arrogance,
+        a calm and steady tortoise challenged him to a race. Amused, the rabbit
+        accepted, confident he would win easily. When the race began, the rabbit
+        sprinted ahead and soon left the tortoise far behind. Feeling sure of
+        his victory, he decided to take a nap midway. Meanwhile, the tortoise
+        kept moving slowly but steadily, never stopping. By the time the rabbit
+        woke up and dashed toward the finish line, the tortoise was already
+        there, having won the race. All the animals cheered for the tortoise,
+        and the rabbit learned an important lesson: slow and steady wins the
+        race.
+      </Expandable>
+      {/*{cart.items.map((item) => (
         <p>
           {item.title} : {item.quantity}
         </p>
       ))}
-      <button onClick={addQuantity}>Add Quantity</button>
+      <button onClick={addQuantity}>Add Quantity</button>*/}
       {/*{alertVisibility && (
         <Alert onClose={() => setAlertvisibility(false)}>My Alert</Alert>
       )}
